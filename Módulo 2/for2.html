@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gatos</title>
+</head>
+<body>
+  <p></p>
+  <script>
+    var gatos = ['Bob', 'Ted', 'Garfild', 'Tom'];
+    var info = 'Meus gatos chamam ';
+    var para = document.querySelector('p')
+
+    for (var i = 0; i < gatos.length; i++) {
+      if (i === gatos.length - 1){ //foi criada uma condição para evitar a virgula no final.
+        info += 'e ' + gatos[i] + '.'
+      }else{
+      info += gatos[i] + ', ';
+      }
+    }
+
+    para.textContent = info;
+  </script>
+</body>
+
+</html>

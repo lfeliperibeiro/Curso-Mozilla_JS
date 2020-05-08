@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Nomes e Telefones</title>
+</head>
+<body>
+  <label for="search">Procure por um nome de contato: </label>
+  <input id="search" type="text">
+  <button>Procurar</button>
+  <p></p>
+
+  <script>
+  var contatos = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+  var para = document.querySelector('p');
+  var input = document.querySelector('input');
+  var btn = document.querySelector('button');
+
+  btn.addEventListener('click', function(){
+    var searchNome = input.value;
+    input.value = '';//limpar a tela
+    input.focus();
+    for (var i =0; i < contatos.length; i++){
+      var divContato = contatos[i].split(':');
+      if (divContato[0] === searchNome){
+        para.textContent = divContato[0] + ':  número de telefone é ' + divContato[1] + '.';
+        break;//encerrar o loop.
+
+      }else{
+        para.textContent = 'Contato não encontrado.'
+      }
+    }
+  });
+
+  </script>
+  
+</body>
+</html>

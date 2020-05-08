@@ -1,0 +1,1 @@
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Gerador_de_historias_bobas

@@ -1,0 +1,34 @@
+ 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+      // Esta é uma razão pela qual é muito importante usar this, 
+      // então eles usarão seus próprios valores e não algum outro
+      // valor.
+      function person(name) {
+        this.name = name;
+        this.greeting = function(){
+          alert('Oi! Eu sou ' + this.name + ' .')
+        }
+      }
+      // new é usada para informar ao navegador que queremos criar 
+      // uma nova instância de objeto, seguida pelo nome da função
+      // com seus parâmetros obrigatórios contidos entre parênteses, 
+      // e o resultado é armazenado em uma variável 
+      const person1 = new person('Felipe');
+      const person2 = new person('Ana');
+      
+      person1.greeting()
+
+    </script>
+</html>

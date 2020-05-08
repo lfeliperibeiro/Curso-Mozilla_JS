@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+
+    function quadrado(num) {
+      return num * num;
+    }
+
+    function cubo(num) {
+      return num * num * num;
+    }
+
+    function fatorial(num) {
+      let x = num;
+      while (x > 1) {
+        num *= x - 1;
+        x--;
+      }
+      return num;
+
+    }
+    input.onchange = function () {
+      let num = input.value;
+      if (isNaN(num)) {
+        para.textContent = 'Você precisa colocar um número!'
+      } else {
+        para.textContent = `${num} ao quadrado é ${quadrado(num)}. 
+          ${num} ao cubo é ${cubo(num)}.
+          ${num} fatorial é ${fatorial(num)}.`
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+      function person(first, last, age, gender, interests){
+        this.name = {
+          'first': first,
+          'last': last
+        };
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+        this.bio = function(){
+          alert(this.name.first + ' ' + this.name.last + ' tem ' + this.age + ' anos de idade. Gosta de  ' + this.interests[0] + ' e ' + this.interests[1] + '.');
+        };
+        this.greeting = function(){
+          alert('Olá eu sou ' + this.name.first + '.');
+        }
+      }
+      let person1 = new person('Felipe', 'Ribeiro', 36, 'masculino', ['musica', 'programação']);
+      
+      person1.bio()
+
+    </script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gatos</title>
+</head>
+<body>
+  <p></p>
+  <script>
+    var gatos = ['Bob', 'Ted', 'Garfild', 'Tom'];
+    var info = 'Meus gatos chamam ';
+    var para = document.querySelector('p')
+
+    var i = 0;
+    while(i < gatos.length) {
+      if(i === gatos.length -1){
+        info += 'e ' + gatos[i] + '.';
+      }else{
+        info += gatos[i] + ', ';
+      }
+      i++
+    }
+
+    para.textContent = info;
+  </script>
+</body>
+
+</html>
